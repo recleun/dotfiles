@@ -1,0 +1,59 @@
+{
+    "layer": "top",
+    "position": "top",
+    "height": 30, 
+    // "width": 1280, // auto
+    "spacing": 4,
+    "modules-left": ["hyprland/workspaces"],
+    "modules-center": [],
+    "modules-right": ["pulseaudio", "network", "cpu", "temperature", "memory", "clock", "tray"],
+    "reload_style_on_change": true,
+    "tray": {
+        "spacing": 8
+    },
+    "memory": {
+        "format": "Memory: {}%"
+    },
+    "cpu": {
+        "format": "CPU: {}%"
+    },
+    "temperature": {
+        "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
+        "critical-threshold": 80,
+        "format": "{temperatureC}°C {icon}",
+        "format-icons": ["", "", ""]
+    },
+    "clock": {
+        "timezone": "Africa/Cairo",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "format-alt": "{:%Y-%m-%d}"
+    },
+    "network": {
+        "format-wifi": "{essid} ({signalStrength}%) ",
+        //"format-ethernet": "{ipaddr}/{cidr} ",
+        "format-ethernet": "Connected ",
+        "tooltip-format": "{ifname} via {gwaddr} ",
+        "format-linked": "{ifname} (No IP) ",
+        "format-disconnected": "Disconnected ⚠",
+        "format-alt": "{ifname}: {ipaddr}/{cidr}"
+    },
+    "pulseaudio": {
+        // "scroll-step": 1, // %, can be a float
+        "format": "{volume}% {icon}  {format_source}",
+        "format-bluetooth": "{volume}% {icon} {format_source}",
+        "format-bluetooth-muted": " {icon} {format_source}",
+        "format-muted": " {format_source}",
+        "format-source": "{volume}% ",
+        "format-source-muted": "",
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", "", ""]
+        },
+        "on-click": "pavucontrol"
+    },
+}

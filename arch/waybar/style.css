@@ -1,0 +1,172 @@
+* {
+	border: none;
+	border-radius: 10px;
+	font-family: "JetbrainsMono Nerd Font" ;
+	font-size: 15px;
+	min-height: 10px;
+}
+
+window#waybar {
+	background: black;
+    border-radius: 0px;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+window#waybar.hidden {
+	opacity: 0.2;
+}
+
+#window {
+	margin-top: 6px;
+	padding-left: 10px;
+	padding-right: 10px;
+	border-radius: 10px;
+	transition: none;
+    color: transparent;
+	background: transparent;
+}
+
+#workspaces {
+	margin-top: 6px;
+	margin-left: 6px;
+	font-size: 4px;
+	border-radius: 5px;
+	background: #161320;
+	transition: none;
+    margin-bottom: 6px;
+}
+
+#workspaces button {
+	transition: none;
+	color: white;
+	background: transparent;
+	font-size: 16px;
+	border-radius: 2px;
+}
+
+#workspaces button.occupied {
+	transition: none;
+	color: #FFCF96;
+	background: transparent;
+	font-size: 4px;
+}
+
+#workspaces button.active {
+    color: #FFCF96;
+    border-top: 2px solid #FFCF96;
+    border-bottom: 2px solid #FFCF96;
+}
+
+#workspaces button:hover {
+	transition: none;
+	box-shadow: inherit;
+	text-shadow: inherit;
+	border-color: #E8A2AF;
+    color: #FFCF96;
+}
+
+#workspaces button.active:hover {
+    color: #E8A2AF;
+}
+
+#network {
+	margin-top: 6px;
+	margin-left: 8px;
+	padding-left: 10px;
+	padding-right: 10px;
+	margin-bottom: 0px;
+	border-radius: 10px;
+	transition: none;
+	color: white;
+	background: #bd93f9;
+    margin-bottom: 6px;
+    background: transparent;
+}
+
+#pulseaudio {
+	margin-top: 6px;
+	margin-left: 8px;
+	padding-left: 10px;
+	padding-right: 10px;
+	margin-bottom: 0px;
+	border-radius: 10px;
+	transition: none;
+	background: #FAE3B0;
+    margin-bottom: 6px;
+    background: transparent;
+	color: white;
+}
+
+#clock {
+	margin-top: 6px;
+	margin-left: 8px;
+	padding-left: 10px;
+	padding-right: 10px;
+	margin-bottom: 0px;
+	border-radius: 10px;
+	transition: none;
+	background: #ABE9B3;
+    margin-bottom: 6px;
+    background: transparent;
+	/*background: #1A1826;*/
+	color: white;
+}
+
+#memory {
+	margin-top: 6px;
+	margin-left: 8px;
+	padding-left: 10px;
+	margin-bottom: 0px;
+	padding-right: 10px;
+	border-radius: 10px;
+	transition: none;
+	background: #DDB6F2;
+    margin-bottom: 6px;
+    background: transparent;
+    color: white;
+}
+
+#cpu {
+	margin-top: 6px;
+	margin-left: 8px;
+	padding-left: 10px;
+	margin-bottom: 0px;
+	padding-right: 10px;
+	border-radius: 10px;
+	transition: none;
+	background: #96CDFB;
+    margin-bottom: 6px;
+    background: transparent;
+    color: white;
+}
+
+#tray {
+	margin-top: 6px;
+	margin-left: 8px;
+	padding-left: 10px;
+	margin-bottom: 0px;
+    margin-right: 10px;
+	padding-right: 10px;
+	border-radius: 10px;
+	transition: none;
+	color: #B5E8E0;
+	background: #161320;
+    margin-bottom: 6px;
+    background: transparent;
+    color: white;
+}
+
+#temperature {
+	margin-top: 6px;
+	margin-left: 8px;
+	padding-left: 10px;
+	margin-bottom: 0px;
+	padding-right: 10px;
+	border-radius: 10px;
+	transition: none;
+	color: #161320;
+	background: #96CDFB;
+    margin-bottom: 6px;
+    background: transparent;
+    color: white;
+}
