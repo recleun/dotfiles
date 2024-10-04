@@ -1,0 +1,73 @@
+{
+    "layer": "top",
+    "position": "top",
+    "exclusive": true,
+    "width": 1900,
+    "height": 34,
+    "spacing": 5,
+    "margin-top": 10,
+    "reload_style_on_change": true,
+    "name": "bar",
+    "modules-left": ["hyprland/submap", "custom/separator", "hyprland/workspaces"],
+    "modules-center": ["hyprland/window"],
+    "modules-right": ["custom/separator", "custom/spotify", "custom/separator", "pulseaudio", "pulseaudio/slider", "custom/separator", "hyprland/language", "custom/separator", "clock"],
+    "clock": {
+        "format": "{:%I:%M}",
+        "interval": 60,
+        "on-click": "notify-send 'Now!' \"$(now)\" -t 2000"
+    },
+    "hyprland/workspaces": {
+        "format": "{icon}",
+        "format-icons": {
+            "1": "",
+            "2": "",
+            "3": " ",
+            // "active": "",
+            "default": "",
+        },
+    },
+    "hyprland/window": {
+        "format": "{}",
+        "separate-outputs": true,
+        "rewrite": {
+            "(^(vim).*)": "Best Text Editor",
+        },
+    },
+    "hyprland/language": {
+        "format": "{}",
+        "format-en": "EN",
+        "format-ar": "AR",
+        "min-length": 3,
+        "max-length": 3,
+    },
+    "hyprland/submap": {
+        "format": "{}",
+        "always-on": true,
+        "min-length": 10,
+        "max-length": 10,
+        "default-submap": "NORMAL",
+        "tooltip": false
+    },
+    "pulseaudio": {
+        "format": "{icon}    {volume}%",
+        "format-muted": "",
+        "format-icons": {
+            "default": ["", "", ""],
+        },
+        "scroll-step": 1,
+    },
+    "pulseaudio/slider": {
+        "min": 0,
+        "max": 100,
+        "orientation": "horizontal",
+    },
+    "custom/spotify": {
+        "format": "{}",
+        "exec": "scripts/spotify.sh",
+        "max-length": 20,
+        "interval": 1,
+    },
+    "custom/separator": {
+        "format": "|",
+    }
+}

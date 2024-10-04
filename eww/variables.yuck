@@ -1,0 +1,29 @@
+(defpoll time
+    :interval "1s"
+    :initial "initial-value"
+    :run-while time-visible
+    `date "+%I:%M"`
+)
+
+(defvar hmode
+    "NORMAL"
+)
+
+(defvar htitle
+    ""
+)
+
+(defvar hspace
+    "(hyprspace (hyprspace-item :icon '  ') )"
+)
+
+(defpoll date
+    :interval "1s"
+    `date "+%Y/%m/%d, %A"`
+)
+
+(defpoll audio-volume
+    :initial "100"
+    :interval "1s"
+    `./scripts/audiovolume.sh`
+)

@@ -1,0 +1,14 @@
+#! /bin/bash
+
+if [[ -n "$1" ]] then
+    if [[ "$1" == "discord" ]]; then
+        hyprctl dispatch "exec vesktop --enable-features=UseOzonePlatform --ozone-platform=wayland"
+        echo "Discord has been started :)"
+    elif [[ "$1" == "eww-integration" ]]; then
+        ~/.config/hypr/scripts/eww-integration.sh
+    else
+        echo "No entry for $1 was found :("
+    fi
+else
+    echo "No program specified to start :("
+fi

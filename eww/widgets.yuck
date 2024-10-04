@@ -1,0 +1,119 @@
+(defwidget clock []
+    (box
+        :class "clock"
+        :halign "end"
+        :tooltip date
+        time
+    )
+)
+
+(defwidget separator []
+    (box
+        :class "separator"
+        "|"
+    )
+)
+
+(defwidget hyprmode []
+    (box
+        :class "hyprmode"
+        hmode
+    )
+)
+
+(defwidget hyprtitle []
+    (box
+        :class "hyprtitle"
+        htitle
+    )
+)
+
+(defwidget hyprspace []
+    (box
+        :class "hyprspace"
+        :space-evenly false
+        :spacing 10
+        (children)
+    )
+)
+
+(defwidget hyprspace-item [icon]
+    (box
+        :class "hyprspace-item"
+        icon
+    )
+)
+
+(defwidget audio-control []
+    (box
+        :class "audio-control"
+        :space-evenly false
+        :spacing 10
+        "  "
+        (scale
+            :orientation "h"
+            :class "audio-scale"
+            :min "0"
+            :max "101"
+            :value audio-volume
+            :round-digits 1
+            :onchange "amixer -D pulse sset Master {}%"
+        )
+    )
+)
+
+(defwidget sys-info []
+    (box
+        :class "sys-info"
+        :space-evenly false
+        :spacing 10
+        (mem-info
+            :icon ""
+        )
+        (cpu-info
+            :icon ""
+        )
+    )
+)
+
+(defwidget cpu-info [icon]
+    (box
+        :class "cpu-info"
+        :space-evenly false
+        :spacing 15
+        icon
+        (box
+            :space-evenly false
+            (label
+                :text {strlength(round(EWW_CPU.avg, 0)) < 3 ? strlength(round(EWW_CPU.avg, 0)) == 2 ? "⠀" : "⠀" : ""}
+            )
+            (label
+                :text "${round(EWW_CPU.avg, 0)}%"
+            )
+            (label
+                :text {strlength(round(EWW_CPU.avg, 0)) < 3 ? strlength(round(EWW_CPU.avg, 0)) == 2 ? "" : "⠀" : ""}
+            )
+        )
+    )
+)
+
+(defwidget mem-info [icon]
+    (box
+        :class "mem-info"
+        :space-evenly false
+        :spacing 10
+        icon
+        (box
+            :space-evenly false
+            (label
+                :text {strlength(round(EWW_RAM.used_mem_perc, 0)) < 3 ? strlength(round(EWW_RAM.used_mem_perc, 0)) == 2 ? "" : "⠀" : ""}
+            )
+            (label
+                :text "${round(EWW_RAM.used_mem_perc, 0)}%"
+            )
+            (label
+                :text {strlength(round(EWW_RAM.used_mem_perc, 0)) < 3 ? strlength(round(EWW_RAM.used_mem_perc, 0)) == 2 ? " " : "⠀" : ""}
+            )
+        )
+    )
+)

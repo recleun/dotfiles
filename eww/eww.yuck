@@ -1,0 +1,45 @@
+(include "./widgets.yuck")
+(include "./variables.yuck")
+
+(defwindow top-bar
+    :monitor 0
+    :geometry (geometry
+        :x "0px"
+        :y "8px"
+        :width "1900px"
+        :height "25px"
+        :anchor "top center")
+    :stacking "fg"
+    :reserve (struts
+        :distance "40px"
+        :side "top")
+    :windowtype "dock"
+    :exclusive true
+    (box
+        :class "main"
+        (box
+            :class "left"
+            :halign "start"
+            :space-evenly false
+            :spacing 14
+            (hyprmode)
+            (hyprtitle)
+        )
+        (box
+            :class "center"
+            :halign "center"
+        )
+        (box
+            :class "right"
+            :halign "end"
+            :space-evenly false
+            (hyprspace
+                (literal :content hspace)
+            )
+            (sys-info)
+            (audio-control)
+            (clock)
+        )
+    )
+)
+
