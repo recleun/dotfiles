@@ -17,6 +17,10 @@
     "(hyprspace (hyprspace-item :icon '  ') )"
 )
 
+(defvar keyboard
+    "EN"
+)
+
 (defpoll date
     :interval "1s"
     `date "+%Y/%m/%d, %A"`

@@ -38,6 +38,7 @@
             )
             (sys-info)
             (audio-control)
+            (kb-layout)
             (clock)
         )
     )

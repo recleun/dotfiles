@@ -21,10 +21,9 @@ tooltip {
 }
 
 .clock {
-    color: white;
     font-weight: bold;
     font-family: Ubuntu;
-    background-color: #375f7d;
+    background-color: #2a4f6a;
     border-radius: 0 8px 8px 0;
     padding: 0 15px;
 }
@@ -77,16 +76,24 @@ tooltip {
     background-color: #5078a2;
     padding: 0 10px;
     padding-left: 18px;
+    font-weight: bold;
+    font-family: UbuntuMono;
 }
 
 .cpu-info {
     font-size: 16px;
     min-width: 10px;
-    font-family: UbuntuMono;
 }
 
 .mem-info {
     font-size: 16px;
     min-width: 10px;
+}
+
+.kb-layout {
+    background-color: #375f7d;
     font-family: UbuntuMono;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 0 10px;
 }

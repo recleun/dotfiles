@@ -117,3 +117,10 @@
         )
     )
 )
+
+(defwidget kb-layout []
+    (box
+        :class "kb-layout"
+        keyboard
+    )
+)

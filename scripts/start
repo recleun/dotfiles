@@ -6,6 +6,8 @@ if [[ -n "$1" ]] then
         echo "Discord has been started :)"
     elif [[ "$1" == "eww-integration" ]]; then
         ~/.config/hypr/scripts/eww-integration.sh
+    elif [[ "$1" == "eww-keyboard" ]]; then
+        ~/.config/hypr/scripts/eww-keyboard.sh
     else
         echo "No entry for $1 was found :("
     fi
