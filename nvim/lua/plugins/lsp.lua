@@ -1,6 +1,6 @@
 return {
     'VonHeikemen/lsp-zero.nvim',
-    lazy = true,
+    lazy = false,
     branch = 'v3.x',
     dependencies = {
         --- Uncomment the two plugins below if you want to manage the language servers from neovim
