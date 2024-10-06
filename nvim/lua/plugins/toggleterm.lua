@@ -12,9 +12,6 @@ return {
                 },
             })
 
-            -- keybind to open lazygit
-            vim.keymap.set("n", "<C-g>", ":TermExec cmd=lazygit<cr>")
-
             function _G.set_terminal_keymaps()
               local opts = {buffer = 0}
               vim.keymap.set('t', '<C-n>', [[<C-\><C-n>]], opts)
