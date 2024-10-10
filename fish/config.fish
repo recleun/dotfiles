@@ -6,3 +6,5 @@ set -gx NVM_DIR $HOME/.nvm
 function nvm
     bash -c "source $NVM_DIR/nvm.sh; nvm $argv"
 end
+
+starship init fish | source
