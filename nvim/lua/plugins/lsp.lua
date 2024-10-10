@@ -64,6 +64,10 @@ return {
                                     fileMatch = {".eslintrc", ".eslintrc.json"},
                                     url = "https://json.schemastore.org/eslintrc.json"
                                 },
+                                {
+                                    fileMatch = {"fastfetch/config.jsonc"},
+                                    url = "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json"
+                                },
                             }
                         }
                     }
