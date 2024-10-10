@@ -15,7 +15,6 @@
         "memory",
         "swap",
         "separator",
-        "break",
         "colors"
     ],
     "logo": {
@@ -23,7 +22,7 @@
         "preserveAspectRatio": false,
         "source": "~/images/backgrounds/square1.png",
         "padding": {
-            "top": 2,
+            "top": 1,
             "left": 2
         },
         "width": 32,
