@@ -2,6 +2,8 @@
 
 SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 
+echo "Linking fastfetch"
+ln -s $SCRIPT_DIR/fastfetch ~/.config
 echo "Linking lazygit"
 ln -s $SCRIPT_DIR/lazygit ~/.config/
 echo "Linking fish"
