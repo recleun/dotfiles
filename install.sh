@@ -2,6 +2,8 @@
 
 SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 
+echo "Linking fish"
+ln -s $SCRIPT_DIR/fish ~/.config/
 echo "Linking eww"
 ln -s $SCRIPT_DIR/eww ~/.config/
 echo "Linking flameshot"
