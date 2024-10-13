@@ -14,5 +14,3 @@ vim.keymap.set("v", "<C-c>", "\"+y") -- copy to system clipboard
 
 vim.keymap.set("x", "<leader>p", "\"_dP") -- prevents overwriting clipboard when replacing text with print
 vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]]) -- changes all occurunces
-
-vim.keymap.set("n", "<leader>sr", "<C-Minus>")
