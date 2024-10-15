@@ -10,7 +10,7 @@ tooltip {
 }
 
 .main {
-    background-color: #6790af;
+    background-color: #323232;
     border-radius: 8px;
 }
 
@@ -23,7 +23,7 @@ tooltip {
 .clock {
     font-weight: bold;
     font-family: Ubuntu;
-    background-color: #2a4f6a;
+    background-color: #585858;
     border-radius: 0 8px 8px 0;
     padding: 0 15px;
 }
@@ -32,7 +32,7 @@ tooltip {
     font-weight: bold;
     font-family: UbuntuMono;
     font-size: 17px;
-    background-color: #497291;
+    background-color: #4c4c4c;
     border-radius: 8px 0 0 8px;
     padding: 0 15px;
 }
@@ -43,8 +43,7 @@ tooltip {
 }
 
 .hyprspace {
-    /* background-color: #5a82ad; */
-    background-color: #6790af;
+    background-color: #323232;
     padding: 0 6px;
     padding-left: 9px;
 }
@@ -55,7 +54,7 @@ tooltip {
 }
 
 .audio-control {
-    background-color: #446a92;
+    background-color: #454545;
     padding: 0 20px;
 }
 
@@ -73,7 +72,7 @@ tooltip {
 }
 
 .sys-info {
-    background-color: #5078a2;
+    background-color: #3c3c3c;
     padding: 0 10px;
     padding-left: 18px;
     font-weight: bold;
@@ -91,7 +90,7 @@ tooltip {
 }
 
 .kb-layout {
-    background-color: #375f7d;
+    background-color: #4f4f4f;
     font-family: UbuntuMono;
     font-weight: bold;
     font-size: 16px;
