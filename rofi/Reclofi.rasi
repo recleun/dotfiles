@@ -1,0 +1,67 @@
+* {
+    background-color: transparent;
+    text-color: white;
+}
+
+entry {
+    border: 2px 0px;
+    border-color: none;
+    border-radius: 5px;
+    background-color: black / 40%;
+    padding: 6px;
+    placeholder: "Whaddya need?";
+    placeholder-color: darkgrey;
+    font: inherit;
+    cursor: text;
+}
+
+inputbar {
+    children: [entry];
+    font: "UbuntuMono Bold 12";
+}
+
+window {
+    anchor: center;
+    location: center;
+    width: 30%;
+    background-color: black / 40%;
+    padding: 1em;
+    border-color: none;
+    font: "UbuntuMono Bold 12";
+    border: 0em 0.0em 0.2em;
+}
+
+mainbox { 
+    spacing: 1em;
+}
+
+listview {
+    lines: 10;
+    columns: 1;
+    spacing: 0.5em;
+}
+
+element {
+    orientation: horizontal;
+    border-radius: 4px;
+    border-color: none;
+    background-color: black / 40%;
+    cursor: pointer;
+    padding: 8px;
+}
+
+element selected {
+    background-color: black / 70%;
+    text-color: black;
+}
+
+element-icon {
+    size: 32px;
+    cursor: inherit;
+}
+
+element-text {
+    horizontal-align: 0.5;
+    vertical-align: 0.5;
+    cursor: inherit;
+}
