@@ -30,7 +30,7 @@ configuration {
   }
   filebrowser {
       directories-first: true;
-      sorting-method:    "name";
+      sorting-method: "name";
   }
 }
 
