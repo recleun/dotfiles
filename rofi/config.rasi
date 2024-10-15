@@ -24,14 +24,14 @@ configuration {
 	kb-element-prev: "ISO_Left_Tab";
 	kb-row-first: "Home,KP_Home";
 	kb-row-last: "End,KP_End";
-  timeout {
+    timeout {
       action: "kb-cancel";
       delay:  0;
-  }
-  filebrowser {
+    }
+    filebrowser {
       directories-first: true;
       sorting-method: "name";
-  }
+    }
 }
 
 @theme "Reclofi"
