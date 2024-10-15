@@ -3,7 +3,7 @@ configuration {
     font: "UbuntuMono 12";
 	show-icons: true;
 	terminal: "kitty";
-	drun-display-format: "{name} [<span weight='light' size='small'><i>({generic})</i></span>]";
+	drun-display-format: "{name} [<span weight='bold' size='small'><i>({generic})</i></span>]";
 	drun-url-launcher: "xdg-open";
 	disable-history: false;
 	case-sensitive: false;
