@@ -3,7 +3,12 @@ return {
         "nvim-telescope/telescope.nvim",
         branch = '0.1.x',
         dependencies = { 'nvim-lua/plenary.nvim' },
-        lazy = false,
+        lazy = true,
+        keys = {
+            { "<leader>f" },
+            { "<leader>st" },
+            { "<leader>pl" },
+        },
         config = function()
             local builtin = require("telescope.builtin")
             vim.keymap.set("n", "<leader>f", builtin.find_files, {})
@@ -19,14 +24,6 @@ return {
                         base_dirs = { '~/dev/' },
                         cd_scope = { 'tab' },
                         hidden_files = true,
-                        -- on_project_selected = function(prompt_bufnr)
-                        --     -- :Ex directory doesn't change after selecting new project
-                        --     -- Harpoon list gets cleared after selecting new project
-                        --     -- Try adding project with global scope
-                        --     local project_actions = require("telescope._extensions.project.actions")
-                        --     project_actions.change_working_directory(prompt_bufnr)
-                        --     require("harpoon"):list():select(1)
-                        -- end
                     }
                 }
             })
@@ -37,12 +34,14 @@ return {
     },
     {
         "nvim-telescope/telescope-ui-select.nvim",
+        lazy = true,
     },
     {
         "nvim-telescope/telescope-file-browser.nvim",
-        dependencies = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" }
+        lazy = true,
     },
     {
         "nvim-telescope/telescope-project.nvim",
+        lazy = true,
     }
 }

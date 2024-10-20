@@ -1,6 +1,7 @@
 return {
     'VonHeikemen/lsp-zero.nvim',
-    lazy = false,
+    lazy = true,
+    event = "BufReadPre",
     branch = 'v3.x',
     dependencies = {
         --- Uncomment the two plugins below if you want to manage the language servers from neovim
@@ -30,7 +31,7 @@ return {
         -- read this: https://github.com/VonHeikemen/lsp-zero.nvim/blob/v3.x/doc/md/guide/integrate-with-mason-nvim.md
         require('mason').setup({})
         require('mason-lspconfig').setup({
-            ensure_installed = { 'rust_analyzer', 'ts_ls', 'lua_ls', 'pyright', 'eslint', 'wgsl_analyzer', 'jsonls', 'cssls' },
+            ensure_installed = { 'rust_analyzer', 'ts_ls', 'lua_ls', 'pyright', 'eslint', 'wgsl_analyzer', 'jsonls', 'cssls', 'jdtls' },
         })
 
         require("mason-lspconfig").setup_handlers({

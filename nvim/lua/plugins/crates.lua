@@ -1,7 +1,8 @@
 return {
     'saecki/crates.nvim',
     tag = 'stable',
-    lazy = false,
+    lazy = true,
+    ft = "toml",
     config = function()
         local crates = require("crates")
         local opts = { silent = true }

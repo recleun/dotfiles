@@ -1,6 +1,7 @@
 return {
     'andweeb/presence.nvim',
-    lazy = false,
+    lazy = true,
+    event = "BufReadPre",
     config = function()
         require("presence").setup({
             auto_update         = true,                       -- Update activity based on autocmd events (if `false`, map or manually execute `:lua package.loaded.presence:update()`)
