@@ -4,6 +4,8 @@ set -gx ARCHFLAGS -arch (uname -m)
 set -gx NVM_DIR $HOME/.nvm
 set fish_greeting
 
+fish_vi_key_bindings
+
 function nvm
     bash -c "source $NVM_DIR/nvm.sh; nvm $argv"
 end
