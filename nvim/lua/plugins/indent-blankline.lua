@@ -1,5 +1,8 @@
 return {
     "lukas-reineke/indent-blankline.nvim",
-    event = "InsertEnter",
     lazy = true,
+    event = "BufReadPre",
+    config = function()
+        require("ibl").setup()
+    end
 }
