@@ -28,3 +28,5 @@ echo "Linking oh-my-zsh"
 ln -s $SCRIPT_DIR/oh-my-zsh/custom ~/.oh-my-zsh/
 echo "Linking scripts"
 ln -s $SCRIPT_DIR/scripts ~/
+echo "Linking audio"
+ln -s $SCRIPT_DIR/audio ~/audio
