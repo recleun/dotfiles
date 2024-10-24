@@ -8,6 +8,8 @@ if [[ -n "$1" ]] then
         ~/.config/hypr/scripts/eww-integration.sh
     elif [[ "$1" == "eww-keyboard" ]]; then
         ~/.config/hypr/scripts/eww-keyboard.sh
+    elif [[ "$1" == "wayvibes" ]]; then
+        wayvibes ~/audio/mechvibes/cherrymx-blue-abs
     else
         echo "No entry for $1 was found :("
     fi
