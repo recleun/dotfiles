@@ -1,0 +1,1 @@
+source "/home/recleun/.deno/env.fish"
