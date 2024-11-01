@@ -31,12 +31,23 @@ return {
         -- read this: https://github.com/VonHeikemen/lsp-zero.nvim/blob/v3.x/doc/md/guide/integrate-with-mason-nvim.md
         require('mason').setup({})
         require('mason-lspconfig').setup({
-            ensure_installed = { 'clangd', 'rust_analyzer', 'ts_ls', 'lua_ls', 'pyright', 'eslint', 'wgsl_analyzer', 'jsonls', 'cssls', 'jdtls' },
+            ensure_installed = { 'clangd', 'rust_analyzer', 'ts_ls', 'denols', 'lua_ls', 'pyright', 'eslint', 'wgsl_analyzer', 'jsonls', 'cssls', 'jdtls' },
         })
 
         require("mason-lspconfig").setup_handlers({
             function(server_name)
                 require("lspconfig")[server_name].setup({capabilities = capabilities})
+            end,
+            ["denols"] = function()
+                require("lspconfig").denols.setup({
+                    root_dir = require("lspconfig").util.root_pattern("deno.json", "deno.jsonc"),
+                })
+            end,
+            ["ts_ls"] = function()
+                require("lspconfig").ts_ls.setup({
+                    root_dir = require("lspconfig").util.root_pattern("package.json"),
+                    single_file_support = false,
+                })
             end,
             ["jsonls"] = function()
                 require("lspconfig").jsonls.setup({
