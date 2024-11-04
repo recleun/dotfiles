@@ -61,6 +61,10 @@ return {
                                     url = "https://json.schemastore.org/package.json"
                                 },
                                 {
+                                    fileMatch = {"deno.json"},
+                                    url = "https://deno.land/x/deno@v2.0.4/cli/schemas/config-file.v1.json"
+                                },
+                                {
                                     fileMatch = {"tsconfig*.json"},
                                     url = "https://json.schemastore.org/tsconfig.json"
                                 },
