@@ -18,6 +18,11 @@ return {
             vim.keymap.set("n", "<leader>b", ":Telescope buffers<CR>")
             local telescope = require("telescope")
             telescope.setup({
+                pickers = {
+                    buffers = {
+                        sort_lastused = true
+                    },
+                },
                 extensions = {
                     ["ui-select"] = {
                         require("telescope.themes").get_dropdown({})
