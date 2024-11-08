@@ -1,0 +1,5 @@
+assign [class="google-chrome"] 2
+assign [class="Google-chrome"] 2
+assign [class="firefox"] 2
+assign [class="vesktop"] 3
+assign [class="Spotify"] 4

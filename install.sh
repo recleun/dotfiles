@@ -2,8 +2,10 @@
 
 SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 
+echo "Linking i3"
+ln -s $SCRIPT_DIR/i3 ~/.config/
 echo "Linking fastfetch"
-ln -s $SCRIPT_DIR/fastfetch ~/.config
+ln -s $SCRIPT_DIR/fastfetch ~/.config/
 echo "Linking lazygit"
 ln -s $SCRIPT_DIR/lazygit ~/.config/
 echo "Linking fish"
@@ -29,4 +31,4 @@ ln -s $SCRIPT_DIR/oh-my-zsh/custom ~/.oh-my-zsh/
 echo "Linking scripts"
 ln -s $SCRIPT_DIR/scripts ~/
 echo "Linking audio"
-ln -s $SCRIPT_DIR/audio ~/audio
+ln -s $SCRIPT_DIR/audio ~/audio/
