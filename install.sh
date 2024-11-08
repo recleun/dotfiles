@@ -2,6 +2,8 @@
 
 SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 
+echo "Linking tmux"
+ln -s $SCRIPT_DIR/tmux ~/.config/
 echo "Linking i3"
 ln -s $SCRIPT_DIR/i3 ~/.config/
 echo "Linking fastfetch"
