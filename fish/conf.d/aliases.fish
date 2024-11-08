@@ -1,15 +1,7 @@
-function vim
-    nvim $argv
-end
+alias vim="nvim"
 
-function gs
-    git status
-end
+alias gs="git status"
+alias gc="git commit"
+alias gl="git log --oneline"
 
-function gc
-    git commit $argv
-end
-
-function gl
-    git log --oneline
-end
+alias ls="ls -lah"
