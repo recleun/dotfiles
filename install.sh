@@ -6,6 +6,8 @@ echo "Linking tmux"
 ln -s $SCRIPT_DIR/tmux ~/.config/
 echo "Linking i3"
 ln -s $SCRIPT_DIR/i3 ~/.config/
+echo "Linking i3status"
+ln -s $SCRIPT_DIR/i3status ~/.config/
 echo "Linking fastfetch"
 ln -s $SCRIPT_DIR/fastfetch ~/.config/
 echo "Linking lazygit"
