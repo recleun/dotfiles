@@ -3,6 +3,7 @@ include ./autostart
 include ./binds
 include ./modes
 include ./bar
+include ./style
 
 set $mod Mod4
 
