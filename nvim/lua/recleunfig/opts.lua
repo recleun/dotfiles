@@ -29,3 +29,4 @@ vim.opt.clipboard = "" -- separates the system clipboard and nvim's keyboard
 vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir" -- sets a directory to hold undo file that can store days worth undo
 vim.opt.undofile = true -- enables the undo directory feature
 
+vim.opt.mouse = ""
