@@ -1,5 +1,5 @@
 # class                 border  backgr. text    indicator child_border
-client.focused          #C8C093 #1F1F28 #DCD7BA #DCD7BA   #54546D
+client.focused          #C8C093 #1F1F28 #DCD7BA #C8C093   #1F1F28
 client.focused_inactive #333333 #5f676a #DCD7BA #484e50   #5f676a
 client.unfocused        #333333 #1F1F28 #DCD7BA #292d2e   #222222
 client.urgent           #2f343a #DCD7BA #DCD7BA #C8C093   #C8C093 
