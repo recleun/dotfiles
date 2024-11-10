@@ -12,8 +12,9 @@ general {
 }
 
 order += "disk /"
-order += "load"
+order += "cpu_usage"
 order += "memory"
+order += "volume master"
 order += "tztime local"
 
 wireless _first_ {
@@ -34,8 +35,8 @@ disk "/" {
         format = "Disk: %free / %total"
 }
 
-load {
-        format = "CPU: %1min"
+cpu_usage {
+        format = "CPU: %usage"
 }
 
 memory {
@@ -46,4 +47,12 @@ memory {
 
 tztime local {
         format = "%Y-%m-%d %H:%M:%S"
+}
+
+volume master {
+        format = "VOL: %volume"
+        format_muted = "VOL: muted"
+        device = "default"
+        mixer = "Master"
+        mixer_idx = 0
 }
