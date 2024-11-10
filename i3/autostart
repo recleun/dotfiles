@@ -16,6 +16,9 @@ exec --no-startup-id nm-applet
 # disable mouse acceleration
 exec --no-startup-id xinput --set-prop 9 'libinput Accel Profile Enabled' 0, 1
 
+# set background color
+exec xsetroot -solid "#1F1F28"
+
 exec setxkbmap -layout us,eg
 exec setxkbmap -option "grp:win_space_toggle"
 
