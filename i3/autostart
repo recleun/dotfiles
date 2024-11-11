@@ -19,9 +19,6 @@ exec --no-startup-id xinput --set-prop 9 'libinput Accel Profile Enabled' 0, 1
 # set background color
 exec xsetroot -solid "#1F1F28"
 
-exec --no-startup-id setxkbmap -layout us,eg
-exec --no-startup-id setxkbmap -option "grp:win_space_toggle"
-
 exec --no-startup-id google-chrome-stable
 exec --no-startup-id vesktop
 exec --no-startup-id clipse -listen
