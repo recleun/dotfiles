@@ -4,12 +4,14 @@ return {
     event = "BufReadPre",
     branch = 'v3.x',
     dependencies = {
-        --- Uncomment the two plugins below if you want to manage the language servers from neovim
+        -- lsp management
         'williamboman/mason.nvim',
         'williamboman/mason-lspconfig.nvim',
-        -- LSP Support
+
+        -- lsp functionality
         'neovim/nvim-lspconfig',
-        -- Autocompletion
+
+        -- completions
         'hrsh7th/nvim-cmp',
         'hrsh7th/cmp-nvim-lsp',
         'L3MON4D3/LuaSnip',
@@ -21,16 +23,12 @@ return {
         local lsp_zero = require('lsp-zero')
         local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
-        lsp_zero.on_attach(function(client, bufnr)
-            -- see :help lsp-zero-keybindings
-            -- to learn the available actions
+        lsp_zero.on_attach(function(_, bufnr)
             lsp_zero.default_keymaps({ buffer = bufnr, preserve_mappings = false })
             vim.keymap.set('n', '<leader>ca', vim.lsp.buf.code_action, {})
             vim.keymap.set('n', '<leader>rs', vim.lsp.buf.rename, {})
         end)
 
-        -- to learn how to use mason.nvim with lsp-zero
-        -- read this: https://github.com/VonHeikemen/lsp-zero.nvim/blob/v3.x/doc/md/guide/integrate-with-mason-nvim.md
         require('mason').setup({})
         require('mason-lspconfig').setup({
             ensure_installed = { 'html', 'clangd', 'rust_analyzer', 'ts_ls', 'denols', 'lua_ls', 'pyright', 'eslint', 'wgsl_analyzer', 'jsonls', 'cssls', 'jdtls' },
@@ -102,27 +100,12 @@ return {
                 { name = 'path' },
                 { name = 'nvim_lsp' },
                 { name = 'luasnip' },
-                -- { name = 'crates' },
             },
             mapping = {
                 ['<C-y>'] = cmp.mapping.confirm({ select = false }),
                 ['<C-e>'] = cmp.mapping.abort(),
                 ['<C-k>'] = cmp.mapping.select_prev_item({ behavior = 'select' }),
                 ['<C-j>'] = cmp.mapping.select_next_item({ behavior = 'select' }),
-                ['<C-p>'] = cmp.mapping(function()
-                    if cmp.visible() then
-                        cmp.select_prev_item({ behavior = 'insert' })
-                    else
-                        cmp.complete()
-                    end
-                end),
-                ['<C-n>'] = cmp.mapping(function()
-                    if cmp.visible() then
-                        cmp.select_next_item({ behavior = 'insert' })
-                    else
-                        cmp.complete()
-                    end
-                end),
             },
             snippet = {
                 expand = function(args)
