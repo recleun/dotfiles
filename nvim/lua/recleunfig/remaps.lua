@@ -9,6 +9,7 @@ vim.keymap.set("n", "<leader>cs", ':noh<cr>') -- clear search
 
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv") -- move text up and down when selected
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
+vim.keymap.set("n", "<C-a>", "ggVG<cr>") -- select all file contents
 
 vim.keymap.set("v", "<C-c>", "\"+y") -- copy to system clipboard
 
