@@ -13,6 +13,8 @@ return {
         'hrsh7th/nvim-cmp',
         'hrsh7th/cmp-nvim-lsp',
         'L3MON4D3/LuaSnip',
+        'saadparwaiz1/cmp_luasnip',
+        'rafamadriz/friendly-snippets',
         'hrsh7th/cmp-path',
     },
     config = function()
@@ -31,7 +33,7 @@ return {
         -- read this: https://github.com/VonHeikemen/lsp-zero.nvim/blob/v3.x/doc/md/guide/integrate-with-mason-nvim.md
         require('mason').setup({})
         require('mason-lspconfig').setup({
-            ensure_installed = { 'clangd', 'rust_analyzer', 'ts_ls', 'denols', 'lua_ls', 'pyright', 'eslint', 'wgsl_analyzer', 'jsonls', 'cssls', 'jdtls' },
+            ensure_installed = { 'html', 'clangd', 'rust_analyzer', 'ts_ls', 'denols', 'lua_ls', 'pyright', 'eslint', 'wgsl_analyzer', 'jsonls', 'cssls', 'jdtls' },
         })
 
         require("mason-lspconfig").setup_handlers({
@@ -93,10 +95,13 @@ return {
 
         local cmp = require('cmp')
 
+        require("luasnip.loaders.from_vscode").lazy_load()
+
         cmp.setup({
             sources = {
                 { name = 'path' },
                 { name = 'nvim_lsp' },
+                { name = 'luasnip' },
                 -- { name = 'crates' },
             },
             mapping = {
