@@ -2,7 +2,7 @@ return {
     'saecki/crates.nvim',
     tag = 'stable',
     lazy = true,
-    ft = "toml",
+    event = { "BufRead Cargo.toml" },
     config = function()
         local crates = require("crates")
         local opts = { silent = true }
