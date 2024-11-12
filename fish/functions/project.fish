@@ -1,4 +1,4 @@
-function devim
+function project
     cd ~/dev/
     set target (fzf)
     cd $target/..
