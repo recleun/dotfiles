@@ -2,6 +2,7 @@
 
 SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 LIST=(
+    "xinit"
     "tmux"
     "i3"
     "i3status"
@@ -24,6 +25,9 @@ LIST=(
 if [[ -n "$1" ]] then
     if [[ "$1" == "list" ]] then
         printf '%s\n' "${LIST[@]}"
+    elif [[ "$1" == "xinit" ]]; then
+        echo "Linking xinit";
+        ln -s $SCRIPT_DIR/.xinitrc ~/
     elif [[ "$1" == "tmux" ]]; then
         echo "Linking tmux"
         ln -s $SCRIPT_DIR/tmux ~/.config/
