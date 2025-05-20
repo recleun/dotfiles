@@ -2,17 +2,6 @@
 # https://wiki.archlinux.org/index.php/XDG_Autostart
 exec --no-startup-id dex --autostart --environment i3
 
-# The combination of xss-lock, nm-applet and pactl is a popular choice, so
-# they are included here as an example. Modify as you see fit.
-
-# xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
-# screen before suspend. Use loginctl lock-session to lock your screen.
-exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
-
-# NetworkManager is the most popular way to manage wireless networks on Linux,
-# and nm-applet is a desktop environment-independent system tray GUI for it.
-exec --no-startup-id nm-applet
-
 # disable mouse acceleration
 exec --no-startup-id xinput --set-prop 9 'libinput Accel Profile Enabled' 0, 1
 
@@ -20,8 +9,7 @@ exec --no-startup-id xinput --set-prop 9 'libinput Accel Profile Enabled' 0, 1
 exec xsetroot -solid "#1F1F28"
 
 exec --no-startup-id google-chrome-stable
-exec --no-startup-id vesktop
+exec --no-startup-id discord
 exec --no-startup-id clipse -listen
 exec --no-startup-id spotify
 exec --no-startup-id flameshot
-exec --no-startup-id alsactl restore --file ~/.config/asound.state 
