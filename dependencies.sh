@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+sudo pacman -Sy neovim i3-wm xorg-xinit xorg-server xorg-xinput xorg-xsetroot lazygit kitty rofi vifm fastfetch clang deno starship discord unzip dunst flameshot xclip ripgrep fzf ttf-cascadia-mono-nerd playerctl openssh noto-fonts-cjk unclutter
+
+curl https://sh.rustup.rs -sSf | sh
+
+yay -S clipse
+
+yay -S spotify
+spotify & sleep 15; kill -INT %+
+curl -fsSL https://raw.githubusercontent.com/spicetify/cli/main/install.sh | sh
+curl -fsSL https://raw.githubusercontent.com/spicetify/marketplace/main/resources/install.sh | sh
+
+fish -c install-fisher
+fish -c install-fisher nvm
