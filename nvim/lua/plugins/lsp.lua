@@ -11,6 +11,9 @@ return {
         -- lsp functionality
         'neovim/nvim-lspconfig',
 
+        -- improvements
+        'lopi-py/luau-lsp.nvim',
+
         -- completions
         'hrsh7th/nvim-cmp',
         'hrsh7th/cmp-nvim-lsp',
@@ -37,6 +40,16 @@ return {
         require("mason-lspconfig").setup_handlers({
             function(server_name)
                 require("lspconfig")[server_name].setup({capabilities = capabilities})
+            end,
+            ["luau_lsp"] = function()
+                require("luau-lsp").setup({
+                    platform = {
+                        type = "roblox",
+                    },
+                    types = {
+                        roblox_security_level = "PluginSecurity",
+                    },
+                })
             end,
             ["denols"] = function()
                 require("lspconfig").denols.setup({
