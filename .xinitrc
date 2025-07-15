@@ -30,8 +30,6 @@ fi
 
 xset s off
 xset -dpms
-setxkbmap -layout us,eg
-setxkbmap -option "grp:win_space_toggle"
 unclutter &
 ~/.fehbg &
 
