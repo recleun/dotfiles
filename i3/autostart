@@ -8,7 +8,9 @@ exec --no-startup-id xinput --set-prop 9 'libinput Accel Profile Enabled' 0, 1
 # set background color
 exec xsetroot -solid "#1F1F28"
 
-exec --no-startup-id google-chrome-stable
+exec --no-startup-id brightnessctl set 1%
+
+exec --no-startup-id firefox
 exec --no-startup-id discord
 exec --no-startup-id clipse -listen
 exec --no-startup-id spotify
