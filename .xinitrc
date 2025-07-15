@@ -33,5 +33,6 @@ xset -dpms
 setxkbmap -layout us,eg
 setxkbmap -option "grp:win_space_toggle"
 unclutter &
+~/.fehbg &
 
 exec i3
