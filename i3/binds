@@ -30,6 +30,7 @@ bindsym $mod+period exec rofimoji
 bindsym $mod+p exec playerctl -p spotify play-pause
 bindsym $mod+bracketright exec playerctl -p spotify next
 bindsym $mod+bracketleft exec playerctl -p spotify previous
+bindsym $mod+n exec dunstctl close-all
 
 bindsym $mod+h focus left
 bindsym $mod+j focus down
