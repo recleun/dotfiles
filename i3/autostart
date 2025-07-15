@@ -5,8 +5,8 @@ exec --no-startup-id dex --autostart --environment i3
 # disable mouse acceleration
 exec --no-startup-id xinput --set-prop 9 'libinput Accel Profile Enabled' 0, 1
 
-# set background color
-exec xsetroot -solid "#1F1F28"
+# set background image
+exec --no-startup-id feh --bg-scale ~/media/img/backgrounds/dark-sky.png
 
 exec --no-startup-id brightnessctl set 1%
 
