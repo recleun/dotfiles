@@ -23,7 +23,7 @@ bindsym $mod+Return exec kitty
 bindsym $mod+c kill
 
 bindsym $mod+q exec --no-startup-id rofi -show drun
-bindsym $mod+w exec --no-startup-id google-chrome-stable
+bindsym $mod+w exec --no-startup-id firefox
 bindsym $mod+v exec --no-startup-id kitty -e "$SHELL" -c "i3-msg 'floating enable' && clipse"
 bindsym Print exec flameshot gui
 bindsym $mod+period exec rofimoji
