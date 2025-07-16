@@ -1,3 +1,8 @@
+# assign different programs to specific workspaces
+# run the following command then click on the application
+# window to get the class name:
+# xprop | grep WM_CLASS | awk '{ print $4 }' 
+
 assign [class="google-chrome"] 2
 assign [class="Google-chrome"] 2
 assign [class="firefox"] 2

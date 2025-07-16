@@ -7,10 +7,13 @@ exec xsetroot -solid "#1F1F28"
 # set background image
 exec --no-startup-id feh --bg-scale ~/media/img/backgrounds/dark-sky.png
 
+# set brightness to 1%
 exec --no-startup-id brightnessctl set 1%
 
+# set keyboard layout to english/arabic using win+space to toggle
 exec --no-startup-id setxkbmap -layout us,eg -option grp:win_space_toggle
 
+# autostart apps
 exec --no-startup-id firefox
 exec --no-startup-id discord
 exec --no-startup-id clipse -listen

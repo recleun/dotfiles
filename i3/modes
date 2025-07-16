@@ -1,10 +1,11 @@
-# resize window (you can also use the mouse for that)
+# resize window
 mode "resize" {
         bindsym l resize shrink width 5 px or 5 ppt
         bindsym k resize grow height 5 px or 5 ppt
         bindsym j resize shrink height 5 px or 5 ppt
         bindsym h resize grow width 5 px or 5 ppt
 
+        # return to normal mode using these keys
         bindsym Return mode "default"
         bindsym Escape mode "default"
         bindsym $mod+r mode "default"

@@ -1,3 +1,4 @@
+# include different sections of the config
 include ./workspaces
 include ./autostart
 include ./binds
@@ -5,13 +6,10 @@ include ./modes
 include ./bar
 include ./style
 
+# set mod to Windows key
 set $mod Mod4
 
-# is used in the bar {} block below.
-#font pango:monospace 10
-
-# This font is widely installed, provides lots of unicode glyphs, right-to-left
-# text rendering and scalability on retina/hidpi displays (thanks to pango).
+# set the font
 font pango:CaskaydiaMonoNerdFont Bold 15
 
 focus_on_window_activation focus
