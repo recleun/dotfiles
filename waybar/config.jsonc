@@ -63,7 +63,7 @@
     },
     "custom/spotify": {
         "format": "{}",
-        "exec": "scripts/spotify.sh",
+        "exec": "~/.config/waybar/scripts/spotify.sh",
         "max-length": 20,
         "interval": 1,
     },
