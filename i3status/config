@@ -59,7 +59,7 @@ volume master {
 }
 
 battery 0 {
-    format = "FUEL: %percentage"
+    format = "FUEL: %percentage (%remaining)"
     integer_battery_capacity = true
     threshold_type = "percentage"
     low_threshold = 20
