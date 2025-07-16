@@ -20,6 +20,7 @@ LIST=(
     "oh-my-zsh"
     "scripts"
     "audio"
+    "dunst"
 )
 
 if [[ -n "$1" ]] then
@@ -79,6 +80,9 @@ if [[ -n "$1" ]] then
     elif [[ "$1" == "audio" ]]; then
         echo "Linking audio"
         ln -s $SCRIPT_DIR/audio ~/audio/
+    elif [[ "$1" == "dunst" ]]; then
+        echo "Linking dunst"
+        ln -s $SCRIPT_DIR/dunst ~/.config/
     else
         echo "No $1 was found, use \`./install.sh list\` to see a valid list"
     fi
