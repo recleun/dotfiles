@@ -33,7 +33,7 @@ battery all {
 }
 
 disk "/" {
-        format = "Disk: %used / %total"
+        format = "DISK: %used / %total"
 }
 
 cpu_usage {
