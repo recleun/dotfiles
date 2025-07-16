@@ -21,6 +21,7 @@ LIST=(
     "scripts"
     "audio"
     "dunst"
+    "picom"
 )
 
 if [[ -n "$1" ]] then
@@ -83,6 +84,9 @@ if [[ -n "$1" ]] then
     elif [[ "$1" == "dunst" ]]; then
         echo "Linking dunst"
         ln -s $SCRIPT_DIR/dunst ~/.config/
+    elif [[ "$1" == "picom" ]]; then
+        echo "Linking picom"
+        ln -s $SCRIPT_DIR/picom ~/.config/
     else
         echo "No $1 was found, use \`./install.sh list\` to see a valid list"
     fi
