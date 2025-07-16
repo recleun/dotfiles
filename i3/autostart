@@ -16,6 +16,6 @@ exec --no-startup-id setxkbmap -layout us,eg -option grp:win_space_toggle
 # autostart apps
 exec --no-startup-id firefox
 exec --no-startup-id discord
-exec --no-startup-id clipse -listen
+exec --no-startup-id greenclip daemon > /dev/null
 exec --no-startup-id spotify
 exec --no-startup-id flameshot
