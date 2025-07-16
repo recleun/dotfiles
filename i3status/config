@@ -28,10 +28,6 @@ ethernet _first_ {
         format_down = "E: down"
 }
 
-battery all {
-        format = "%status %percentage %remaining"
-}
-
 disk "/" {
         format = "DISK: %used / %total"
 }
