@@ -13,6 +13,7 @@ general {
 
 order += "disk /"
 order += "cpu_usage"
+order += "cpu_temperature all"
 order += "memory"
 order += "volume master"
 order += "wireless _first_"
@@ -35,6 +36,11 @@ disk "/" {
 
 cpu_usage {
         format = "CPU: %usage"
+}
+
+cpu_temperature all {
+        format = "CPU-T: %degrees°C"
+        max_threshold = 60
 }
 
 memory {
