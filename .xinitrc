@@ -30,7 +30,6 @@ fi
 
 xset s off
 xset -dpms
-unclutter &
 ~/.fehbg &
 
 exec i3

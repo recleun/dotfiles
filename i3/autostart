@@ -13,6 +13,9 @@ exec --no-startup-id brightnessctl set 1%
 # set keyboard layout to english/arabic using win+space to toggle
 exec --no-startup-id setxkbmap -layout us,eg -option grp:win_space_toggle
 
+# remove the mouse icon when its not used
+exec --no-startup-id unclutter
+
 # autostart apps
 exec --no-startup-id firefox
 exec --no-startup-id discord
