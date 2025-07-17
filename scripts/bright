@@ -3,11 +3,21 @@
 MON="eDP-1"    # Discover monitor name with: xrandr | grep " connected"
 STEP=10          # Step Up/Down brightnes by: 5 = ".05", 10 = ".10", etc.
 
+function exitScript() {
+    printf "Monitor $MON"
+    echo $( xrandr --verbose --current | grep ^"$MON" -A5 | tail -n1 )
+    exit
+}
+
 CurrBright=$( xrandr --verbose --current | grep ^"$MON" -A5 | tail -n1 )
 CurrBright="${CurrBright##* }"  # Get brightness level with decimal place
 
 Left=${CurrBright%%"."*}        # Extract left of decimal point
 Right=${CurrBright#*"."}        # Extract right of decimal point
+
+if [[ $Left -ge 1 && "$1" == "Up" ]] then
+    exitScript
+fi
 
 MathBright="0"
 [[ "$Left" != 0 && "$STEP" -lt 10 ]] && STEP=10     # > 1.0, only .1 works
@@ -31,5 +41,4 @@ fi
 xrandr --output "$MON" --brightness "$CurrBright"   # Set new brightness
 
 # Display current brightness
-printf "Monitor $MON "
-echo $( xrandr --verbose --current | grep ^"$MON" -A5 | tail -n1 )
+exitScript
