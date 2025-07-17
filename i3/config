@@ -11,6 +11,6 @@ include ./gaps
 set $mod Mod4
 
 # set the font
-font pango:CaskaydiaMonoNerdFont Bold 15
+font pango:FantasqueSansM Nerd Font Mono Bold 16
 
 focus_on_window_activation focus
