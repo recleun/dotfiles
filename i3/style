@@ -4,3 +4,5 @@ client.focused_inactive #333333 #5f676a #DCD7BA #484e50   #5f676a
 client.unfocused        #333333 #1F1F28 #DCD7BA #292d2e   #222222
 client.urgent           #2f343a #DCD7BA #DCD7BA #C8C093   #C8C093 
 client.placeholder      #000000 #0c0c0c #DCD7BA #000000   #0c0c0c
+
+for_window [class=".*"] title_format " <span size='smaller'>%title</span>"
