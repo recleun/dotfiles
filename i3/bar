@@ -1,7 +1,7 @@
 bar {
     font pango:FantasqueSansM Nerd Font Mono Bold 16
     status_command i3status
-    separator_symbol " | "
+    separator_symbol " || "
     colors {
         background #1F1F28
         statusline #C8C093
