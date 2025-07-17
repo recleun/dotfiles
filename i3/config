@@ -5,6 +5,7 @@ include ./binds
 include ./modes
 include ./bar
 include ./style
+include ./gaps
 
 # set mod to Windows key
 set $mod Mod4
