@@ -1,7 +1,7 @@
 return {
     'neovim/nvim-lspconfig',
     lazy = true,
-    event = { "BufReadPost", "BufNewFile" },
+    event = { "BufReadPre", "BufNewFile" },
     cmd = { "LspInfo", "LspInstall", "LspUninstall" },
     dependencies = {
         -- lsp management
