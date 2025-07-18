@@ -30,9 +30,9 @@ vim.api.nvim_create_autocmd('LspAttach', {
         bufmap('n', '<leader>gi', '<cmd>lua vim.lsp.buf.implementation()<cr>')
         bufmap('n', '<leader>rs', '<cmd>lua vim.lsp.buf.rename()<cr>')
         bufmap('n', '<leader>ca', '<cmd>lua vim.lsp.buf.code_action()<cr>')
-        bufmap('n', '<leader>gs', '<cmd>lua vim.lsp.buf.signature_help()<cr>')
         bufmap('n', '<F2>', '<cmd>lua vim.lsp.buf.rename()<cr>')
         bufmap({'n', 'x'}, '<F3>', '<cmd>lua vim.lsp.buf.format({async = true})<cr>')
         bufmap('n', 'gl', '<cmd>lua vim.diagnostic.open_float()<cr>')
+        bufmap('n', 'gh', '<cmd>lua vim.lsp.buf.signature_help()<cr>')
     end,
 })

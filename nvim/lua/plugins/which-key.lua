@@ -26,6 +26,20 @@ return {
         })
 
         wk.add({
+            {"<leader>g", group = "Go to"},
+            {"<leader>gd", desc = "Go to definition"},
+            {"<leader>gD", desc = "Go to declaration"},
+            {"<leader>gr", desc = "Go to references"},
+            {"<leader>gi", desc = "Go to implementation"},
+        })
+
+        wk.add({
+            {"g", group = "Hover features"},
+            {"gl", desc = "Show diagnostics"},
+            {"gh", desc = "Show signature help"},
+        })
+
+        wk.add({
             { "<leader>e", desc = "Open file explorer" },
             { "<leader>f", desc = "Search for a file" },
             { "<leader>s", desc = "Rename all occurences/Search" },
