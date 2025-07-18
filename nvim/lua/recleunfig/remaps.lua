@@ -18,3 +18,20 @@ vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><
 
 vim.keymap.set("n", "<C-n>", vim.cmd.bnext)
 vim.keymap.set("n", "<C-b>", vim.cmd.bprev)
+
+vim.api.nvim_create_autocmd('LspAttach', {
+    callback = function(event)
+        local bufmap = function(mode, rhs, lhs)
+          vim.keymap.set(mode, rhs, lhs, {buffer = event.buf})
+        end
+
+        bufmap('n', 'K', '<cmd>lua vim.lsp.buf.hover()<cr>')
+        bufmap('n', '<leader>gr', '<cmd>lua vim.lsp.buf.references()<cr>')
+        bufmap('n', '<leader>gi', '<cmd>lua vim.lsp.buf.implementation()<cr>')
+        bufmap('n', '<leader>rs', '<cmd>lua vim.lsp.buf.rename()<cr>')
+        bufmap('n', '<leader>ca', '<cmd>lua vim.lsp.buf.code_action()<cr>')
+        bufmap('n', '<leader>gs', '<cmd>lua vim.lsp.buf.signature_help()<cr>')
+        bufmap('n', '<F2>', '<cmd>lua vim.lsp.buf.rename()<cr>')
+        bufmap({'n', 'x'}, '<F3>', '<cmd>lua vim.lsp.buf.format({async = true})<cr>')
+    end,
+})

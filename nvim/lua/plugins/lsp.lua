@@ -1,15 +1,12 @@
 return {
-    'VonHeikemen/lsp-zero.nvim',
+    'neovim/nvim-lspconfig',
     lazy = true,
-    event = "BufEnter",
-    branch = 'v3.x',
+    event = { "BufReadPost", "BufNewFile" },
+    cmd = { "LspInfo", "LspInstall", "LspUninstall" },
     dependencies = {
         -- lsp management
         'williamboman/mason.nvim',
         'williamboman/mason-lspconfig.nvim',
-
-        -- lsp functionality
-        'neovim/nvim-lspconfig',
 
         -- improvements
         'lopi-py/luau-lsp.nvim',
@@ -23,85 +20,60 @@ return {
         'hrsh7th/cmp-path',
     },
     config = function()
-        local lsp_zero = require('lsp-zero')
+        local lspconfig = require('lspconfig')
         local capabilities = require("cmp_nvim_lsp").default_capabilities()
-
-        lsp_zero.on_attach(function(_, bufnr)
-            lsp_zero.default_keymaps({ buffer = bufnr, preserve_mappings = false })
-            vim.keymap.set('n', '<leader>ca', vim.lsp.buf.code_action, {})
-            vim.keymap.set('n', '<leader>rs', vim.lsp.buf.rename, {})
-        end)
 
         require('mason').setup({})
         require('mason-lspconfig').setup({
             ensure_installed = { 'emmet_language_server', 'html', 'clangd', 'rust_analyzer', 'ts_ls', 'denols', 'lua_ls', 'pyright', 'eslint', 'wgsl_analyzer', 'jsonls', 'cssls', 'jdtls', 'luau_lsp' },
         })
 
-        require("mason-lspconfig").setup_handlers({
-            function(server_name)
-                require("lspconfig")[server_name].setup({capabilities = capabilities})
-            end,
-            ["luau_lsp"] = function()
-                require("luau-lsp").setup({
-                    platform = {
-                        type = "roblox",
-                    },
-                    types = {
-                        roblox_security_level = "PluginSecurity",
-                    },
-                })
-            end,
-            ["denols"] = function()
-                require("lspconfig").denols.setup({
-                    root_dir = require("lspconfig").util.root_pattern("deno.json", "deno.jsonc"),
-                })
-            end,
-            ["ts_ls"] = function()
-                require("lspconfig").ts_ls.setup({
-                    root_dir = require("lspconfig").util.root_pattern("package.json"),
-                    single_file_support = false,
-                })
-            end,
-            ["jsonls"] = function()
-                require("lspconfig").jsonls.setup({
-                    filetypes = { "json", "jsonc" },
-                    capabilities = capabilities,
-                    settings = {
-                        json = {
-                            schemas = {
-                                {
-                                    fileMatch = {"package.json"},
-                                    url = "https://json.schemastore.org/package.json"
-                                },
-                                {
-                                    fileMatch = {"deno.json"},
-                                    url = "https://deno.land/x/deno@v2.0.4/cli/schemas/config-file.v1.json"
-                                },
-                                {
-                                    fileMatch = {"tsconfig*.json"},
-                                    url = "https://json.schemastore.org/tsconfig.json"
-                                },
-                                {
-                                    fileMatch = {
-                                        ".prettierrc",
-                                        ".prettierrc.json",
-                                        "prettier.config.json"
-                                    },
-                                    url = "https://json.schemastore.org/prettierrc.json"
-                                },
-                                {
-                                    fileMatch = {".eslintrc", ".eslintrc.json"},
-                                    url = "https://json.schemastore.org/eslintrc.json"
-                                },
-                                {
-                                    fileMatch = {"fastfetch/config.jsonc"},
-                                    url = "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json"
-                                },
-                            }
-                        }
+        vim.lsp.config('denols', {
+            root_dir = lspconfig.util.root_pattern("deno.json", "deno.jsonc"),
+        })
+
+        vim.lsp.config('ts_ls', {
+            root_dir = lspconfig.util.root_pattern("package.json"),
+            single_file_support = false,
+        })
+
+        vim.lsp.config('jsonls', {
+            filetypes = { "json", "jsonc" },
+            capabilities = capabilities,
+            settings = {
+                json = {
+                    schemas = {
+                        {
+                            fileMatch = {"package.json"},
+                            url = "https://json.schemastore.org/package.json"
+                        },
+                        {
+                            fileMatch = {"deno.json"},
+                            url = "https://deno.land/x/deno@v2.0.4/cli/schemas/config-file.v1.json"
+                        },
+                        {
+                            fileMatch = {"tsconfig*.json"},
+                            url = "https://json.schemastore.org/tsconfig.json"
+                        },
+                        {
+                            fileMatch = {
+                                ".prettierrc",
+                                ".prettierrc.json",
+                                "prettier.config.json"
+                            },
+                            url = "https://json.schemastore.org/prettierrc.json"
+                        },
+                        {
+                            fileMatch = {".eslintrc", ".eslintrc.json"},
+                            url = "https://json.schemastore.org/eslintrc.json"
+                        },
+                        {
+                            fileMatch = {"fastfetch/config.jsonc"},
+                            url = "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json"
+                        },
                     }
-                })
-            end,
+                }
+            }
         })
 
         local cmp = require('cmp')
