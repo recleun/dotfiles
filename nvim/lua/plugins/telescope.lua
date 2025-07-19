@@ -20,8 +20,13 @@ return {
             telescope.setup({
                 pickers = {
                     buffers = {
-                        sort_lastused = true
-                    },
+                        sort_lastused = true,
+                        mappings = {
+                            n = {
+                                ["dd"] = require("telescope.actions").delete_buffer,
+                            }
+                        }
+                    }
                 },
                 extensions = {
                     ["ui-select"] = {
