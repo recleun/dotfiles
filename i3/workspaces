@@ -7,4 +7,7 @@ assign [class="google-chrome"] 2
 assign [class="Google-chrome"] 2
 assign [class="firefox"] 2
 assign [class="discord"] 3
+assign [class="Element"] 3
 assign [class="Spotify"] 4
+
+workspace_layout tabbed
