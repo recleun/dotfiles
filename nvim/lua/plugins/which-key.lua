@@ -20,6 +20,12 @@ return {
             {"<leader>hb", desc = "Go to previous buffer in list"},
         })
 
+        -- telescope
+        wk.add({
+            {"<leader>st", desc = "Search for string"},
+            {"<leader>f", desc = "Find file"},
+        })
+
         wk.add({
             {"<leader>r", group = "Rename"},
             {"<leader>rs", desc = "Rename Symbol"},
