@@ -1,11 +1,24 @@
 #!/usr/bin/env bash
-sudo pacman -Sy neovim i3-wm xorg-xinit xorg-server xorg-xinput xorg-xsetroot lazygit kitty rofi fastfetch clang deno starship discord unzip dunst flameshot xclip ripgrep fzf ttf-cascadia-mono-nerd playerctl openssh noto-fonts-cjk unclutter htop fish jq socat ttf-font-awesome
+# fonts
+sudo pacman -Sy ttf-font-awesome ttf-cascadia-mono-nerd ttf-fantasque-nerd noto-fonts-cjk
+
+# window management
+sudo pacman -S i3-wm xorg-xinit xorg-server xorg-xinput xorg-xsetroot xclip unclutter dunst
+
+# coding related
+sudo pacman -S neovim kitty fish lazygit clang deno
+
+# tools
+sudo pacman -S unzip ripgrep fzf playerctl openssh htop jq socat
+
+# must-haves
+sudo pacman -S rofi fastfetch starship discord flameshot 
 
 curl https://sh.rustup.rs -sSf | sh
 
-yay -S rofi-greenclip
+# aur Must haves
+yay -S spotify rofi-greenclip
 
-yay -S spotify
 spotify & sleep 15; kill -INT %+
 sudo chmod a+wr /opt/spotify
 sudo chmod a+wr /opt/spotify/Apps -R
