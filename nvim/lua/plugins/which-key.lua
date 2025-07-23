@@ -32,11 +32,11 @@ return {
         })
 
         wk.add({
-            {"<leader>g", group = "Go to"},
-            {"<leader>gd", desc = "Go to definition"},
-            {"<leader>gD", desc = "Go to declaration"},
-            {"<leader>gr", desc = "Go to references"},
-            {"<leader>gi", desc = "Go to implementation"},
+            {"g", group = "Go to"},
+            {"gd", desc = "Go to definition"},
+            {"gD", desc = "Go to declaration"},
+            {"gr", desc = "Go to references"},
+            {"gi", desc = "Go to implementation"},
         })
 
         wk.add({

@@ -26,8 +26,10 @@ vim.api.nvim_create_autocmd('LspAttach', {
         end
 
         bufmap('n', 'K', '<cmd>lua vim.lsp.buf.hover()<cr>')
-        bufmap('n', '<leader>gr', '<cmd>lua vim.lsp.buf.references()<cr>')
-        bufmap('n', '<leader>gi', '<cmd>lua vim.lsp.buf.implementation()<cr>')
+        bufmap('n', 'gr', '<cmd>lua vim.lsp.buf.references()<cr>')
+        bufmap('n', 'gi', '<cmd>lua vim.lsp.buf.implementation()<cr>')
+        bufmap('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<cr>')
+        bufmap('n', 'gD', '<cmd>lua vim.lsp.buf.declaration()<cr>')
         bufmap('n', '<leader>rs', '<cmd>lua vim.lsp.buf.rename()<cr>')
         bufmap('n', '<leader>ca', '<cmd>lua vim.lsp.buf.code_action()<cr>')
         bufmap('n', '<F2>', '<cmd>lua vim.lsp.buf.rename()<cr>')
