@@ -1,4 +1,8 @@
 function dev
+    argparse 'n/new' -- $argv
+    if set -ql _flag_n
+        mkdir -p ~/dev/"$argv"
+    end
     cd ~/dev/"$argv"
 end
 
