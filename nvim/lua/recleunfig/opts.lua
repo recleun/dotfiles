@@ -21,6 +21,7 @@ vim.api.nvim_create_autocmd("BufLeave", {
 
 vim.opt.number = true -- show numbers
 vim.opt.relativenumber = true -- show relative numbers
+vim.opt.fillchars = { eob = " " } -- removes ~ after line numbers
 vim.opt.wrap = true -- text wraps when it reaches the end of the screen
 vim.opt.guicursor = "" -- sets the cursor to a block
 
