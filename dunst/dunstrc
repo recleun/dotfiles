@@ -28,7 +28,7 @@
     horizontal_padding = 8
     text_icon_padding = 0
 
-    frame_width = 3
+    frame_width = 2
     frame_color = "#C8C093"
 
     gap_size = 0
@@ -103,3 +103,8 @@
 [shorty_alert]
     body = "^my little shorty"
     format = "<b>%s 💘</b>\n<span color='#FFC0EB'>%b</span>"
+
+[instagram-annoyance]
+    body = "^You have unseen notifications.$"
+    skip_display = true
+    history_ignore = true
