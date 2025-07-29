@@ -50,7 +50,7 @@
     ignore_newline = no
     stack_duplicates = true
     hide_duplicate_count = false
-    show_indicators = yes
+    show_indicators = false
 
     enable_recursive_icon_lookup = true
     icon_theme = Adwaita
@@ -79,7 +79,6 @@
     mouse_middle_click = close_all
     mouse_right_click = close_current
 
-    # wayland
     force_xwayland = false
 
 [urgency_low]
