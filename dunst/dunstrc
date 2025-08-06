@@ -100,8 +100,13 @@
     timeout = 0
     default_icon = dialog-warning
 
-[shorty_alert]
+[shorty_alert_ig]
     body = "^my little shorty"
+    format = "<b>%s 💘</b>\n<span color='#FFC0EB'>%b</span>"
+
+[shorty_alert_dis]
+    class = "discord"
+    title = "wifey <3"
     format = "<b>%s 💘</b>\n<span color='#FFC0EB'>%b</span>"
 
 [instagram-annoyance]
