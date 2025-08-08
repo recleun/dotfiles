@@ -9,7 +9,7 @@ sudo pacman -S i3-wm xorg-xinit xorg-server xorg-xinput xorg-xsetroot xclip uncl
 sudo pacman -S neovim kitty fish lazygit clang deno
 
 # tools
-sudo pacman -S unzip ripgrep fzf playerctl openssh htop jq socat
+sudo pacman -S unzip ripgrep fzf playerctl openssh htop jq socat imagemagick
 
 # must-haves
 sudo pacman -S rofi fastfetch starship discord flameshot 
