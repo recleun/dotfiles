@@ -105,8 +105,7 @@
     format = "<b>%s 💘</b>\n<span color='#FFC0EB'>%b</span>"
 
 [shorty_alert_dis]
-    class = "discord"
-    title = "wifey <3"
+    title = "^wifey <3$"
     format = "<b>%s 💘</b>\n<span color='#FFC0EB'>%b</span>"
 
 [instagram-annoyance]
