@@ -1,9 +1,9 @@
 .bar {
     font-family: Ubuntu;
     font-weight: bold;
-    background-color: rgb(103, 144, 175);
-    border-radius: 10px;
-    color: white;
+    background-color: rgb(31, 31, 40);
+    border-radius: 0px;
+    color: rgb(220, 215, 186);
 }
 
 #clock {
@@ -16,16 +16,16 @@
 
 #workspaces button {
     padding-right: 13px;
-    color: white;
+    color: rgb(220, 215, 186);
 }
 
 #workspaces button.active {
-    border-color: white;
+    border-color: rgb(220, 215, 186);
     border-width: 1px;
 }
 
 #custom-separator {
-    color: rgb(43, 78, 114);
+    color: rgb(220, 215, 186);
     font-size: 19px;
 }
 
@@ -51,8 +51,8 @@
     min-height: 2px;
     min-width: 80px;
     border-radius: 15px;
-    border-color: rgb(43, 78, 114);
-    background-color: rgb(43, 78, 114);
+    color: rgb(220, 215, 186);
+    background-color: rgb(12, 12, 12);
 }
 
 #pulseaudio-slider highlight {
