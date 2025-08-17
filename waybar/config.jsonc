@@ -58,6 +58,7 @@
     },
     "tray": {
         "icon-size": 22,
+        "spacing": 8,
     },
     "hyprland/submap": {
         "format": "{}",
