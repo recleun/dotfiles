@@ -17,11 +17,11 @@
         "tooltip-format": "{:%B %d, %A}",
     },
     "hyprland/workspaces": {
-        "format": "{icon}",
-        "format-icons": {
-            "active": "",
-            "default": "",
-        },
+        "format": "{}",
+        // "format-icons": {
+        //     "active": "",
+        //     "default": "",
+        // },
     },
     "hyprland/window": {
         "format": "{}",
