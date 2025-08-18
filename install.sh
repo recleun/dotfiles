@@ -75,6 +75,9 @@ if [[ -n "$1" ]] then
     elif [[ "$1" == "oh-my-zsh" ]]; then
         echo "Linking oh-my-zsh"
         ln -s $SCRIPT_DIR/oh-my-zsh/custom ~/.oh-my-zsh/
+    elif [[ "$1" == "starship" ]]; then
+        echo "Linking starship"
+        ln -s $SCRIPT_DIR/starship/starship.toml ~/.config/
     elif [[ "$1" == "scripts" ]]; then
         echo "Linking scripts"
         ln -s $SCRIPT_DIR/scripts ~/
