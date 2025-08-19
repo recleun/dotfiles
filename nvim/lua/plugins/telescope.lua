@@ -22,6 +22,11 @@ return {
                     buffers = {
                         sort_lastused = true,
                         mappings = {
+                            i = {
+                                ["<C-d>"] = require("telescope.actions").delete_buffer,
+                                ["<C-j>"] = require("telescope.actions").move_selection_next,
+                                ["<C-k>"] = require("telescope.actions").move_selection_previous,
+                            },
                             n = {
                                 ["dd"] = require("telescope.actions").delete_buffer,
                             }
