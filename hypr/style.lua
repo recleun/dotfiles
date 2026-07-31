@@ -1,22 +1,11 @@
+require("themes.everforest")
+
 -- Refer to https://wiki.hypr.land/Configuring/Basics/Variables/
 hl.config({
     general = {
         gaps_in  = 3,
         gaps_out = 10,
-
         border_size = 2,
-
-        col = {
-            active_border = {
-                colors = {
-                    "rgb(DCD7BA)",
-                    -- "rgba(00ff99ee)",
-                },
-                -- angle = 45,
-            },
-            inactive_border = "rgb(333333)",
-        },
-
         layout = "dwindle",
     },
 
