@@ -4,7 +4,7 @@ local mainMod = "SUPER"
 
 local terminal    = "kitty"
 local fileManager = "dolphin"
-local launcher    = "hyprlauncher"
+local launcher    = "rofi -show drun"
 local browser     = "firefox"
 local screenshots = "flameshot gui"
 
