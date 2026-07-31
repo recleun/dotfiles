@@ -14,7 +14,7 @@ return {
         end
     },
     {
-        enabled = true,
+        enabled = false,
         "rebelot/kanagawa.nvim",
         lazy = false,
         config = function()
@@ -30,4 +30,12 @@ return {
             vim.cmd.colorscheme("nordic")
         end
     },
+    {
+        enabled = true,
+        "sainnhe/everforest",
+        lazy = false,
+        config = function()
+            vim.cmd.colorscheme("everforest")
+        end,
+    }
 }
