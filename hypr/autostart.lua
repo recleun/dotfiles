@@ -1,5 +1,5 @@
 hl.on("hyprland.start", function () 
-    hl.exec_cmd("waybar")
+    hl.exec_cmd("wayle shell")
     hl.exec_cmd("hyprsunset")
     hl.exec_cmd("dunst")
     hl.exec_cmd("hyprpaper")
