@@ -1,6 +1,6 @@
 vim.g.mapleader = " " -- leader, it's a space
 
-vim.keymap.set("n", "<leader>e", vim.cmd.Ex) -- file explorer
+vim.keymap.set("n", "<leader>e", "<cmd>Oil<cr>") -- file explorer
 
 vim.keymap.set("n", "<C-d>", "<C-d>zz") -- center cursor when going up and down
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
