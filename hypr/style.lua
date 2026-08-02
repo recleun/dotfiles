@@ -37,7 +37,8 @@ hl.config({
 
     misc = {
         disable_hyprland_logo = true,
-        force_default_wallpaper = 0,
+        force_default_wallpaper = false,
+        focus_on_activate = true,
     }
 })
 
