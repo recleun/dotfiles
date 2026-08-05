@@ -22,7 +22,7 @@ return {
         end
     },
     {
-        enabled = false,
+        enabled = true,
         "AlexvZyl/nordic.nvim",
         lazy = false,
         config = function()
@@ -31,7 +31,7 @@ return {
         end
     },
     {
-        enabled = true,
+        enabled = false,
         "sainnhe/everforest",
         lazy = false,
         config = function()

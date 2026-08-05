@@ -3,12 +3,10 @@ return {
     dependencies = { "nvim-tree/nvim-web-devicons" },
     lazy = false,
     config = function()
-        local everforest = require("lualine.themes.everforest")
-        everforest.normal.c.bg = 'none'
         require('lualine').setup {
           options = {
             icons_enabled = true,
-            theme = everforest,
+            theme = require("lualine.themes.nord"),
             component_separators = { left = '', right = ''},
             section_separators = { left = '', right = ''},
             disabled_filetypes = {
