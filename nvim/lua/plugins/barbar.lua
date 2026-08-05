@@ -14,6 +14,9 @@ return {
         vim.keymap.set("n", "<A-9>", "<Cmd>BufferGoto 9<CR>")
         vim.keymap.set("n", "<A-0>", "<Cmd>BufferLast<CR>")
 
+        vim.keymap.set("n", "<C-l>", "<Cmd>BufferMoveNext<CR>")
+        vim.keymap.set("n", "<C-h>", "<Cmd>BufferMovePrevious<CR>")
+
         vim.g.barbar_auto_setup = false
 
         require("barbar").setup({
