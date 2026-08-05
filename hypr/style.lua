@@ -1,4 +1,4 @@
-require("themes.everforest")
+require("themes.nord")
 
 -- Refer to https://wiki.hypr.land/Configuring/Basics/Variables/
 hl.config({
