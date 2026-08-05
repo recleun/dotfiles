@@ -8,14 +8,14 @@ return {
             { "<leader>f" },
             { "<leader>st" },
             { "<leader>pl" },
-            { "<leader>b" },
+            { "<leader>bl" },
         },
         config = function()
             local builtin = require("telescope.builtin")
             vim.keymap.set("n", "<leader>f", builtin.find_files, {})
             vim.keymap.set("n", "<leader>st", builtin.live_grep, {})
             vim.keymap.set("n", "<leader>pl", ":Telescope project<CR>")
-            vim.keymap.set("n", "<leader>b", ":Telescope buffers<CR>")
+            vim.keymap.set("n", "<leader>bl", ":Telescope buffers<CR>")
             local telescope = require("telescope")
             telescope.setup({
                 pickers = {
