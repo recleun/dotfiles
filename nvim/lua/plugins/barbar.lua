@@ -1,7 +1,7 @@
 return {
     "romgrk/barbar.nvim",
     config = function()
-        vim.keymap.set("n", "<C-w>", vim.cmd.bdelete)
+        vim.keymap.set("n", "<A-q>", vim.cmd.bdelete)
 
         vim.keymap.set("n", "<A-1>", "<Cmd>BufferGoto 1<CR>")
         vim.keymap.set("n", "<A-2>", "<Cmd>BufferGoto 2<CR>")
