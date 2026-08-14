@@ -86,6 +86,48 @@ uninstall_module() {
     echo "==> $module uninstalled"
 }
 
+install_variant() {
+    local module="$1"
+    local variant="$2"
+    local module_dir="$MODULES_DIR/$module"
+
+    if ! module_exists "$module"; then
+        echo "Error: module '$module' does not exist."
+        return 1
+    fi
+
+    if ! common_exists "$module"; then
+        echo "Error: common directory for '$module' does not exist."
+        return 1
+    fi
+
+    if ! variant_exists "$module" "$variant"; then
+        echo "Error: variant '$variant' doesn't exist for '$module' does not exist."
+        return 1
+    fi
+
+    echo "==> Installing $module ($variant variant)"
+
+    if [[ -x "$module_dir/dependencies.sh" ]]; then
+        echo "==> Installing dependencies for $module"
+        "$module_dir/dependencies.sh"
+    fi
+
+    echo "==> Linking common directory of $module"
+    stow \
+        --dir="$module_dir" \
+        --target="$HOME" \
+        "common"
+
+    echo "==> Linking $variant variant of $module"
+    stow \
+        --dir="$module_dir/variants" \
+        --target="$HOME" \
+        "$variant"
+
+    echo "==> $module installed ($variant variant)"
+}
+
 install_bundle() {
     local bundle="$1"
     local bundle_file="$BUNDLES_DIR/$bundle"
