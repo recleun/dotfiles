@@ -23,6 +23,18 @@ module_exists() {
     [[ -d "$MODULES_DIR/$1" ]]
 }
 
+variants_exists() {
+    [[ -d "$MODULES_DIR/$1/variants"]]
+}
+
+variant_exists() {
+    [[ -d "$MODULES_DIR/$1/variants/$2" ]]
+}
+
+common_exists() {
+    [[ -d "$MODULES_DIR/$1/common" ]]
+}
+
 install_module() {
     local module="$1"
     local module_dir="$MODULES_DIR/$module"
