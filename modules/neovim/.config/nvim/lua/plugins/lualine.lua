@@ -1,8 +1,12 @@
 return {
     "nvim-lualine/lualine.nvim",
-    dependencies = { "nvim-tree/nvim-web-devicons" },
+    dependencies = {
+        "nvim-tree/nvim-web-devicons",
+        "SmiteshP/nvim-navic",
+    },
     lazy = false,
     config = function()
+        local navic = require("nvim-navic")
         require('lualine').setup {
             options = {
                 icons_enabled = true,
@@ -24,9 +28,16 @@ return {
             },
             sections = {
                 lualine_a = { 'mode' },
-                lualine_b = { 'branch', 'diff', 'diagnostics' },
-                lualine_c = { 'filename' },
-                lualine_x = { 'encoding', 'fileformat', 'filetype', 'filesize' },
+                lualine_b = { 'filename' },
+                lualine_c = {
+                    {
+                        function()
+                            return navic.get_location()
+                        end,
+                        cond = navic.is_available,
+                    }
+                },
+                lualine_x = { 'filetype' },
                 lualine_y = { 'searchcount', 'selectioncount' },
                 lualine_z = { 'location' }
             },

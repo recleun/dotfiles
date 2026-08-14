@@ -3,6 +3,9 @@ return {
     lazy = false,
     dependencies = {
         {
+            "SmiteshP/nvim-navic",
+        },
+        {
             "saghen/blink.cmp",
             version = "v1",
             opts = {
@@ -32,9 +35,17 @@ return {
 
         vim.lsp.enable(enabled)
 
+        local navic = require("nvim-navic")
         vim.api.nvim_create_autocmd("LspAttach", {
             group = vim.api.nvim_create_augroup("LspConfig", { clear = true }),
-            callback = function()
+            callback = function(args)
+
+                local client = vim.lsp.get_client_by_id(args.data.client_id)
+
+                if client and client.server_capabilities.documentSymbolProvider then
+                    navic.attach(client, args.buf)
+                end
+
                 vim.keymap.set("n", "K", vim.lsp.buf.hover)
                 vim.keymap.set("n", "gr", vim.lsp.buf.references)
                 vim.keymap.set("n", "gi", vim.lsp.buf.implementation)
