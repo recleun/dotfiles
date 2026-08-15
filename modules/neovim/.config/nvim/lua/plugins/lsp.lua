@@ -3,9 +3,6 @@ return {
     lazy = false,
     dependencies = {
         {
-            "SmiteshP/nvim-navic",
-        },
-        {
             "saghen/blink.cmp",
             version = "v1",
             opts = {
