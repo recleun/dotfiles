@@ -24,7 +24,7 @@ module_exists() {
 }
 
 variants_exists() {
-    [[ -d "$MODULES_DIR/$1/variants"]]
+    [[ -d "$MODULES_DIR/$1/variants" ]]
 }
 
 variant_exists() {
