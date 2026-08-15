@@ -46,9 +46,9 @@ install_module() {
 
     echo "==> Installing $module"
 
-    if [[ -x "$module_dir/dependencies.sh" ]]; then
+    if [[ -f "$module_dir/dependencies.sh" ]]; then
         echo "==> Installing dependencies for $module"
-        "$module_dir/dependencies.sh"
+        bash "$module_dir/dependencies.sh"
     fi
 
     echo "==> Linking $module"
@@ -78,9 +78,9 @@ uninstall_module() {
         --delete \
         "$module"
 
-    if [[ -x "$module_dir/unlink.sh" ]]; then
+    if [[ -f "$module_dir/unlink.sh" ]]; then
         echo "==> Running cleanup for $module"
-        "$module_dir/unlink.sh"
+        bash "$module_dir/unlink.sh"
     fi
 
     echo "==> $module uninstalled"
@@ -108,9 +108,9 @@ install_variant() {
 
     echo "==> Installing $module ($variant variant)"
 
-    if [[ -x "$module_dir/dependencies.sh" ]]; then
+    if [[ -f "$module_dir/dependencies.sh" ]]; then
         echo "==> Installing dependencies for $module"
-        "$module_dir/dependencies.sh"
+        bash "$module_dir/dependencies.sh"
     fi
 
     echo "==> Linking common directory of $module"
