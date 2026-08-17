@@ -9,4 +9,5 @@ modules/fish/.config/fish/conf.d/nvm.fish
 modules/fish/.config/fish/conf.d/fish_frozen_key_bindings.fish
 modules/fastfetch/.config/fastfetch/themes/noctalia.jsonc
 modules/hyprland/.config/hypr/noctalia.lua
+modules/neovim/.config/nvim/lua/matugen.lua
 
