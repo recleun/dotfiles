@@ -19,9 +19,15 @@ return {
                 }
             },
             sections = {
-                lualine_a = { 'mode' },
-                lualine_b = { 'filename' },
-                lualine_c = {
+                lualine_a = {
+                    {
+                        "filename",
+                        color = {
+                            fg = vim.api.nvim_get_hl(0, { name = "Normal" }),
+                        }
+                    }
+                },
+                lualine_b = {
                     {
                         "navic",
                         color_correction = "dynamic",
