@@ -10,7 +10,7 @@ local launcher      = "noctalia msg panel-open launcher"
 local notifications = "noctalia msg panel-open control-center notifications"
 local wallpaper     = "noctalia msg panel-open wallpaper"
 local clipboard     = "noctalia msg panel-open clipboard"
-local browser       = "firefox"
+local browser       = "zen-browser"
 local screenshots   = "flameshot gui"
 
 hl.bind(mainMod .. " + RETURN", hl.dsp.exec_cmd(terminal))
