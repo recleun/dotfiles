@@ -1,10 +1,8 @@
-require("themes.nord")
-
 -- Refer to https://wiki.hypr.land/Configuring/Basics/Variables/
 hl.config({
     general = {
-        gaps_in  = 3,
-        gaps_out = 10,
+        gaps_in  = 8,
+        gaps_out = 20,
         border_size = 2,
         layout = "dwindle",
     },
@@ -17,16 +15,16 @@ hl.config({
         inactive_opacity = 1.0,
 
         shadow = {
-            enabled      = false,
+            enabled      = true,
             range        = 4,
             render_power = 3,
             color        = 0xee1a1a1a,
         },
 
         blur = {
-            enabled   = false,
-            size      = 2,
-            passes    = 1,
+            enabled   = true,
+            size      = 3,
+            passes    = 2,
             vibrancy  = 0.2,
         },
     },

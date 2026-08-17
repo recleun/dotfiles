@@ -2,24 +2,32 @@ local mainMod = "SUPER"
 
 -- Programs
 
-local terminal    = "kitty"
-local fileManager = "dolphin"
-local launcher    = "rofi -show drun"
-local browser     = "firefox"
-local screenshots = "flameshot gui"
+local terminal      = "kitty"
+local fileManager   = "dolphin"
+local controlCenter = "noctalia msg panel-open control-center"
+local session       = "noctalia msg panel-open session"
+local launcher      = "noctalia msg panel-open launcher"
+local notifications = "noctalia msg panel-open control-center notifications"
+local wallpaper     = "noctalia msg panel-open wallpaper"
+local clipboard     = "noctalia msg panel-open clipboard"
+local browser       = "firefox"
+local screenshots   = "flameshot gui"
 
 hl.bind(mainMod .. " + RETURN", hl.dsp.exec_cmd(terminal))
 hl.bind(mainMod .. " + W", hl.dsp.exec_cmd(browser))
 hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(fileManager))
+hl.bind(mainMod .. " + S", hl.dsp.exec_cmd(controlCenter))
+hl.bind(mainMod .. " + P", hl.dsp.exec_cmd(session))
 hl.bind(mainMod .. " + Q", hl.dsp.exec_cmd(launcher))
+hl.bind(mainMod .. " + N", hl.dsp.exec_cmd(notifications))
+hl.bind(mainMod .. " + SLASH", hl.dsp.exec_cmd(wallpaper))
+hl.bind(mainMod .. " + V", hl.dsp.exec_cmd(clipboard))
 hl.bind("PRINT", hl.dsp.exec_cmd(screenshots))
 
 -- Functions
 
 hl.bind(mainMod .. " + C", hl.dsp.window.close())
-hl.bind(mainMod .. " + N", hl.dsp.exec_cmd("dunstctl close-all"))
-hl.bind(mainMod .. " + V", hl.dsp.exec_cmd("rofi -modi \"clipboard:greenclip print\" -show clipboard"))
-hl.bind(mainMod .. " + PERIOD", hl.dsp.exec_cmd("rofimoji"))
+hl.bind(mainMod .. " + SHIFT + N", hl.dsp.exec_cmd("noctalia msg notification-clear-active"))
 hl.bind(mainMod .. " + SHIFT + E", hl.dsp.exec_cmd("command -v hyprshutdown >/dev/null 2>&1 && hyprshutdown || hyprctl dispatch 'hl.dsp.exit()'"))
 
 -- Layouts
