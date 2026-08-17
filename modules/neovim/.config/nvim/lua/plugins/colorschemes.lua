@@ -22,7 +22,7 @@ return {
         end
     },
     {
-        enabled = true,
+        enabled = false,
         "AlexvZyl/nordic.nvim",
         lazy = false,
         config = function()
