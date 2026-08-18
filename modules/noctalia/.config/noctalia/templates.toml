@@ -1,0 +1,12 @@
+[config.custom_colors.green]
+color = "#00ff00"
+
+[theme.templates.user.neovim_colors]
+input_path = "$XDG_CONFIG_HOME/noctalia/templates/neovim.lua"
+output_path = "$XDG_CONFIG_HOME/nvim/lua/noctalia.lua"
+post_hook = "pkill -SIGUSR1 nvim"
+
+[theme.templates.user.neovim_plugin]
+input_path = "$XDG_CONFIG_HOME/noctalia/templates/base16.lua"
+output_path = "$XDG_CONFIG_HOME/nvim/lua/plugins/base16.lua"
+
