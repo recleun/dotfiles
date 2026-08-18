@@ -21,10 +21,12 @@ return {
                 pickers = {
                     find_files = {
                         hidden = true,
+                        no_ignore = true,
+                        no_ignore_parent = true,
                     },
                     live_grep = {
                         additional_args = function(opts)
-                            return { "--hidden" }
+                            return { "--no-ignore", "--hidden" }
                         end,
                     },
                     buffers = {
