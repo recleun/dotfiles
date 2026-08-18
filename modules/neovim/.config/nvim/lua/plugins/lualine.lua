@@ -9,7 +9,7 @@ return {
         require('lualine').setup {
             options = {
                 icons_enabled = true,
-                theme = require("lualine.themes.nord"),
+                theme = "auto",
                 always_divide_middle = true,
                 globalstatus = false,
                 refresh = {
@@ -33,6 +33,7 @@ return {
                         color_correction = "dynamic",
                     }
                 },
+                lualine_c = {},
                 lualine_x = { 'filetype' },
                 lualine_y = { 'searchcount', 'selectioncount' },
                 lualine_z = { 'location' }
