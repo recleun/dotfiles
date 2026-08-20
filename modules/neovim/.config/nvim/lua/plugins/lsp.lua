@@ -28,6 +28,8 @@ return {
         local enabled = {
             "clangd",
             "lua_ls",
+            "ts_ls",
+            "jsonls",
         }
 
         vim.lsp.enable(enabled)
