@@ -12,6 +12,9 @@ return {
                 max_size = 30,
                 siblings = true,
             },
+            filter = function(buf)
+                return vim.bo[buf].filetype ~= "markdown"
+            end,
         },
         words = { enabled = true },
         dashboard = {
