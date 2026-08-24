@@ -1,8 +1,24 @@
 return {
     "romgrk/barbar.nvim",
-    config = function()
-        vim.keymap.set("n", "<A-q>", vim.cmd.bdelete)
-
+    opts = {
+        animation = true,
+        auto_hide = 1,
+        clickable = false,
+        exclude_name = {
+            "fish",
+        },
+        focus_on_close = "right",
+        icons = {
+            buffer_index = true,
+            buffer_number = false,
+            current = { button = "" },
+            inactive = { button = "" },
+        },
+        insert_at_end = true,
+        maximum_padding = 1,
+        minimum_padding = 1,
+    },
+    init = function()
         vim.keymap.set("n", "<A-1>", "<Cmd>BufferGoto 1<CR>")
         vim.keymap.set("n", "<A-2>", "<Cmd>BufferGoto 2<CR>")
         vim.keymap.set("n", "<A-3>", "<Cmd>BufferGoto 3<CR>")
@@ -18,25 +34,6 @@ return {
         vim.keymap.set("n", "<C-h>", "<Cmd>BufferMovePrevious<CR>")
 
         vim.g.barbar_auto_setup = false
-
-        require("barbar").setup({
-            animation = true,
-            auto_hide = 1,
-            clickable = false,
-            exclude_name = {
-                "fish",
-            },
-            focus_on_close = "right",
-            icons = {
-                buffer_index = true,
-                buffer_number = false,
-                current = { button = "" },
-                inactive = { button = "" },
-            },
-            insert_at_end = true,
-            maximum_padding = 1,
-            minimum_padding = 1,
-        })
     end,
 }
 
