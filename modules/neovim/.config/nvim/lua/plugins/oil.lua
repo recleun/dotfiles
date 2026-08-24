@@ -4,11 +4,10 @@ return {
     dependencies = {
         "nvim-mini/mini.icons",
     },
-    config = function()
-        require("oil").setup({
-            view_options = {
-                show_hidden = true,
-            },
-        })
-    end,
+    opts = {
+        view_options = {
+            show_hidden = true,
+        },
+    },
 }
+
