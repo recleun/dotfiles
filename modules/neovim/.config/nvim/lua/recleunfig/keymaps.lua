@@ -2,9 +2,6 @@ vim.g.mapleader = " " -- leader, it's a space
 
 vim.keymap.set("n", "<leader>e", "<cmd>Oil<cr>") -- file explorer
 
-vim.keymap.set("n", "<C-d>", "<C-d>zz") -- center cursor when going up and down
-vim.keymap.set("n", "<C-u>", "<C-u>zz")
-
 vim.keymap.set("n", "<leader>cs", ':noh<cr>') -- clear search
 
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv") -- move text up and down when selected
