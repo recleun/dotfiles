@@ -10,6 +10,7 @@ return {
             options = {
                 icons_enabled = true,
                 theme = "auto",
+                section_separators = { left = "||" },
                 always_divide_middle = true,
                 globalstatus = false,
                 refresh = {
