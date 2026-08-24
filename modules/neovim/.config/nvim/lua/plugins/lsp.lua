@@ -30,6 +30,7 @@ return {
             "lua_ls",
             "ts_ls",
             "jsonls",
+            "html",
         }
 
         vim.lsp.enable(enabled)
