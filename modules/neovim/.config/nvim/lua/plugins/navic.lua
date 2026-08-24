@@ -48,3 +48,4 @@ return {
         set_navic_highlights()
     end,
 }
+

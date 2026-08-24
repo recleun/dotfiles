@@ -29,3 +29,4 @@ return {
         vim.keymap.set("n", "<leader>cC", crates.open_crates_io, opts)
     end
 }
+

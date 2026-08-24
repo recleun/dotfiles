@@ -45,3 +45,4 @@ return {
         transparent.clear_prefix("Telescope")
     end,
 }
+
