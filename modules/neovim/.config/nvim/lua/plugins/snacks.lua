@@ -29,8 +29,6 @@ return {
     init = function()
         local snacks = require("snacks")
 
-        snacks.dim()
-
         vim.keymap.set("n", "<leader>do", function() snacks.dashboard.open() end)
         vim.keymap.set("n", "<A-q>", function() snacks.bufdelete() end)
     end,
