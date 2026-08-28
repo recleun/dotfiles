@@ -4,7 +4,6 @@ return {
     priority = 1000,
     opts = {
         indent = { enabled = true },
-        notifier = { enabled = true },
         scroll = { enabled = true },
         dim = {
             scope = {
