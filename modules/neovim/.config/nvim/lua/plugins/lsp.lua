@@ -6,6 +6,7 @@ return {
             "saghen/blink.cmp",
             version = "v1",
             opts = {
+                cmdline = { enabled = true },
                 keymap = {
                     preset = "none",
                     ["<C-j>"] = { "select_next", "fallback" },
