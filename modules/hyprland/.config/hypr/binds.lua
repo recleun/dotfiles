@@ -10,8 +10,9 @@ local launcher      = "noctalia msg panel-open launcher"
 local notifications = "noctalia msg panel-open control-center notifications"
 local wallpaper     = "noctalia msg panel-open wallpaper"
 local clipboard     = "noctalia msg panel-open clipboard"
-local browser       = "zen-browser"
-local screenshots   = "flameshot gui"
+local screenshots   = "noctalia msg screenshot-region"
+local winSwitcher   = "noctalia msg window-switcher"
+local browser       = "firefox"
 
 hl.bind(mainMod .. " + RETURN", hl.dsp.exec_cmd(terminal))
 hl.bind(mainMod .. " + W", hl.dsp.exec_cmd(browser))
@@ -23,6 +24,7 @@ hl.bind(mainMod .. " + N", hl.dsp.exec_cmd(notifications))
 hl.bind(mainMod .. " + SLASH", hl.dsp.exec_cmd(wallpaper))
 hl.bind(mainMod .. " + V", hl.dsp.exec_cmd(clipboard))
 hl.bind("PRINT", hl.dsp.exec_cmd(screenshots))
+hl.bind("ALT + TAB", hl.dsp.exec_cmd(winSwitcher))
 
 -- Functions
 
