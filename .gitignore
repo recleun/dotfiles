@@ -11,4 +11,5 @@ modules/fastfetch/.config/fastfetch/themes/noctalia.jsonc
 modules/hyprland/.config/hypr/noctalia.lua
 modules/neovim/.config/nvim/lua/noctalia.lua
 modules/neovim/.config/nvim/lua/plugins/base16.lua
+modules/kitty/.config/kitty/themes/noctalia.conf
 
