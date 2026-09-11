@@ -18,6 +18,19 @@ hl.window_rule({
     workspace = 4,
 })
 
+hl.window_rule({
+    match = { class = "steam", title = "Steam" },
+    workspace = 5,
+})
+
+hl.window_rule({
+    match = { class = "steam", title = "Friends List" },
+    workspace = 5,
+    float = true,
+    center = true,
+    size = { 300, 700 },
+})
+
 -- Ignore maximize requests from all apps
 hl.window_rule({
     name  = "suppress-maximize-events",
