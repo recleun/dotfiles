@@ -1,10 +1,5 @@
 hl.window_rule({
-    match = { class = "firefox" },
-    workspace = 2,
-})
-
-hl.window_rule({
-    match = { class = "zen" },
+    match = { class = "firefox|zen" },
     workspace = 2,
 })
 
