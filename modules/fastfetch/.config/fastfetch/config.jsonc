@@ -18,9 +18,9 @@
         "colors"
     ],
     "logo": {
-        "type": "kitty-direct",
+        "type": "kitty-icat",
         "preserveAspectRatio": false,
-        "source": "~/images/backgrounds/square1.png",
+        "source": "~/pictures/PFPs/lapeace.jpg",
         "padding": {
             "top": 1,
             "left": 2
